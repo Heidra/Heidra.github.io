@@ -1,0 +1,381 @@
+html {
+    height: 100%;
+    font-family: 'Gothic A1', sans-serif;
+
+    --bg: #171924;
+    --bg-panel: #1a1c2b;
+    --color-headings: 	#fcfcfd;
+    --color-text: 	#7680aa;
+    --color-card: #202741;
+}
+
+html[data-theme='light'] {
+    --bg: #ffffff;
+    --bg-panel: #f7f9ff;
+    --color-headings: #1d1f29;
+    --color-text: #333333;
+    --color-card: #f1f3fa;
+    --color-hover: #e1e4f0;
+}
+
+body {
+    background-color: var(--bg);
+    margin: 0;
+
+}
+
+body[data-theme='light'] {
+    background-color: var(--bg);
+}
+
+.container { 
+    background-color: var(--bg-panel);
+    display: flex;
+    justify-content: space-between;
+    height: 250px;
+    border-radius: 0 0 20px 20px;
+    padding-top: 20px;
+}
+
+.container[data-theme='light'] {
+    background-color: var(--bg-panel);
+}
+
+.title {
+    margin-left: 12%;
+    margin-top: 10px;
+    margin-bottom: 100px;
+}
+
+.toggle-container {
+    margin-right: 12.5%;
+    margin-top: 43px;
+    margin-bottom: 100px;
+    display: flex;
+}
+
+h1 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    color: var(--color-headings);
+}
+
+h1[data-theme='light'] {
+    color: var(--color-headings);
+}
+
+p {
+    color: var(--color-text);
+    margin: 5px;
+}
+
+input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+label {
+    cursor: pointer;
+    width: 52px;
+    height: 27px;
+    background-color: #2c89d0; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, #2c89d0 , #32d28e);
+    float: right;
+    border-radius: 100px;
+    position: relative;
+}
+
+label:after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background: #202741;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+[data-theme='light'] label:after{
+    background: var(--color-card);
+}
+
+input:checked {
+    background-color: #0099ff; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, #0099ff , #66ff99);
+}
+
+input:checked + label:after  {
+    left: calc(100% - 4px);
+    transform: translateX(-100%);
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+    transition: all 750ms !important;
+    transition-delay: 0 !important;
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+.together {
+    display: flex;
+    flex-direction: row;
+    margin-top: -110px;
+    padding-left: 173px;
+    padding-right: 173px;
+}
+
+.card {
+    background-color: var(--color-card);
+    border-radius: 5px;
+    text-align: center;
+    flex: 10%;
+    margin: 15px;
+    height: 210px;
+    cursor: pointer;
+}
+
+.card[data-theme='light'] {
+    background-color: var(--color-card);
+}
+
+[data-theme='light'] .card:hover{
+    background-color: var(--color-hover);
+}
+
+.topline {
+    width: 100%;
+    height: 5px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.facebook {
+    background-color: 	#0189f1;
+}
+
+.twitter {
+    background-color: 	#019bee;
+}
+
+.square {
+    background-color: #f0ba5b; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, #f0ba5b , #ad387a);
+}
+
+.circle {
+    background-color: #c10121;
+}
+
+h2 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: var(--color-headings);
+}
+
+
+.title2 {
+    margin-top: 20px;
+    margin-left: 12.3%;
+}
+
+.line {
+    display: flex;
+    padding-left: 173px;
+    padding-right: 173px;
+    height: 150px;
+}
+
+.content {
+    display: block;
+}
+
+.firstline {
+    margin-top: 25px;
+    margin-bottom: 14px;
+    height: 22px;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.fa-facebook-square {
+    color: #008df8;
+    padding: 5px;
+    float: right;
+}
+
+.lastline {
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 22px;
+}
+
+.fa-sort-up {
+    color: #0d9c44;
+    padding-top: 9px;
+    padding-right: 5px;
+}
+
+.howmanytoday {
+    color: #0d9c44;
+}
+
+.inlinediv {
+    height: 100%;
+}
+
+.socialname {
+    color: var(--color-text);
+}
+
+.number {
+    color: var(--color-headings);
+    font-size: xxx-large;
+}
+
+.content > p {
+    margin: 0;
+}
+
+.fa-twitter {
+    color: #00a0f5;
+    padding: 5px;
+    float: right;
+}
+
+.instagram {
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+    margin-right: 5px;
+    background-color: #f0ba5b; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to top right, #f0ba5b , #ad387a);
+    float: right;
+}
+
+.fa-circle {
+    color: #c70020;
+    padding: 5px;
+    float: right;
+}
+
+.fa-caret-down {
+    color: #c70020;
+    padding-top: 9px;
+    padding-right: 5px;
+}
+
+.howmanydowntoday {
+    color: #c70020;
+}
+
+.card2 {
+    background-color: var(--color-card);
+    border-radius: 5px;
+    display: flex;
+    flex: 10%;
+    margin: 15px;
+    cursor: pointer;
+}
+
+[data-theme='light'] .card2:hover{
+    background-color: var(--color-hover);
+}
+
+.littlecolumn1 {
+    margin: 16px;
+    width: 60%;
+}
+
+.littlecolumn2 {
+    margin: 16px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.smallnumber {
+    color: var(--color-headings);
+    font-size: xx-large;
+    margin-left: 4px;
+    margin-top: 18px;
+}
+
+.littlelastline {
+    display: inline-flex;
+    margin-top: 27px;
+    margin-left: auto;
+    padding-right: 10px;
+}
+
+.pushright {
+    padding: 5px;
+    width: 100%;
+    height: 50%;
+}
+
+@media (max-width: 800px) {
+    body {
+        margin: 10px 10px 45px;
+    }
+
+    .together {
+        justify-content: center;
+        flex-direction: column;
+        padding: 0;
+        margin-top: -73px;
+    }
+
+    .line {
+        justify-content: center;
+        flex-direction: column;
+        padding: 0;
+        display: contents;
+    }
+
+    .container {
+        flex-direction: column;
+        justify-content: start;
+        height: 260px;
+        margin: -10px;
+    }
+
+    .title {
+        margin-left: 0;
+        margin-bottom: 0;
+        margin-left: 25px;
+        margin-right: 25px;
+        border-bottom: 1px solid var(--color-text);
+    }
+
+    .title2 {
+        margin-left: 15px;
+        margin-bottom: 25px;
+    }
+
+    h1 {
+        margin-left: 0;
+    }
+
+    p {
+        margin-left: 0;
+        margin-bottom: 30px;
+        }
+
+    .toggle-container {
+        margin: 20px 25px 0 25px;
+        justify-content: space-between;
+    }
+
+    .card {
+        flex: inherit;
+    }
+
+  }
