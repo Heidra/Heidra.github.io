@@ -28,7 +28,7 @@ body[data-theme='light'] {
     background-color: var(--bg);
 }
 
-.container {
+.container { 
     background-color: var(--bg-panel);
     display: flex;
     justify-content: space-between;
